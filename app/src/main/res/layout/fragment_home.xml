@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeFragment">
+
+    <EditText
+        android:id="@+id/tenSach"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Ten sach"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/tenTacGia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Tac gia"
+        app:layout_constraintStart_toStartOf="@id/tenSach"
+        app:layout_constraintTop_toBottomOf="@id/tenSach" />
+
+    <TextView
+        android:id="@+id/phamVi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pham vi"
+        app:layout_constraintStart_toStartOf="@id/tenTacGia"
+        app:layout_constraintTop_toBottomOf="@id/tenTacGia" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/phamVi"
+        app:layout_constraintTop_toBottomOf="@id/phamVi">
+
+        <RadioButton
+            android:id="@+id/hoc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:clickable="true"
+            android:text="Hoc" />
+
+        <RadioButton
+            android:id="@+id/traCuu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:text="Tra Cuu" />
+
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/doiTuong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Doi Tuong"
+        app:layout_constraintStart_toStartOf="@id/radioGroup"
+        app:layout_constraintTop_toBottomOf="@id/radioGroup" />
+
+    <CheckBox
+        android:id="@+id/cntt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:text="CNTT"
+        app:layout_constraintStart_toStartOf="@id/doiTuong"
+        app:layout_constraintTop_toBottomOf="@id/doiTuong" />
+
+    <CheckBox
+        android:id="@+id/vt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:text="VT"
+        app:layout_constraintStart_toStartOf="@id/cntt"
+        app:layout_constraintTop_toBottomOf="@id/cntt" />
+
+    <CheckBox
+        android:id="@+id/dt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:text="DT"
+        app:layout_constraintStart_toStartOf="@id/vt"
+        app:layout_constraintTop_toBottomOf="@id/vt" />
+
+    <RatingBar
+        android:id="@+id/rate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="5"
+        android:rating="1"
+        app:layout_constraintStart_toStartOf="@id/dt"
+        app:layout_constraintTop_toBottomOf="@id/dt" />
+
+    <Button
+        android:id="@+id/save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Save"
+        app:layout_constraintStart_toStartOf="@id/rate"
+        app:layout_constraintTop_toBottomOf="@id/rate" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
